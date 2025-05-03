@@ -19,8 +19,8 @@
         }
         header {
             display: flex;
+            justify-content: center; /* 中央に配置 */
             align-items: center;
-            justify-content: space-between;
             padding: 20px;
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -30,11 +30,13 @@
             font-size: 2.5em;
             color: #4b3832;
             text-align: center;
+            flex: 1;
         }
         header a img {
-            max-width: 100px; /* ロゴの最大幅を指定（サイズ調整） */
+            max-width: 80px; /* ロゴの最大幅を指定（サイズ調整） */
             height: auto;
             cursor: pointer;
+            margin-right: 20px; /* ロゴとタイトルの間に余白を追加 */
         }
         nav {
             background: rgba(255,255,255,0.85);
@@ -85,15 +87,16 @@
             }
 
             header a img {
-                max-width: 80px; /* ロゴサイズを小さく調整 */
-                margin-left: 0; /* ロゴを左寄せにしない */
+                max-width: 60px; /* スマートフォンではロゴを小さくする */
+                margin-right: 0; /* 右余白をなくす */
             }
 
             header h1 {
-                font-size: 2em; /* タイトルのサイズを調整 */
+                font-size: 2em; /* タイトルのフォントサイズを小さく調整 */
+                margin-left: 0; /* 左寄せをなくす */
+                text-align: center;
             }
 
-            /* タイトルの位置がずれないように調整 */
             nav {
                 flex-direction: column; /* スマートフォンでのナビゲーションを縦並び */
                 align-items: center;
@@ -107,7 +110,7 @@
         <a href="#">
             <img src="images/logo.png" alt="ロゴ"> <!-- ここでロゴの画像ファイルを指定 -->
         </a>
-        <h1>遺品整理サービス</h1>
+        <h1>繋ぐ遺品整理サービス</h1>
     </header>
     <nav>
         <a href="#">サービス</a>
