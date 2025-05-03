@@ -20,24 +20,22 @@
         header {
             display: flex;
             align-items: center;
-            justify-content: center; /* PC版で真ん中に寄せる */
+            justify-content: space-between;
             padding: 20px;
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
             color: #4b3832;
-            text-align: center; /* タイトルを中央に配置 */
+            flex: 1;
+            text-align: center;
         }
         header a img {
             max-width: 100px;
             height: auto;
             cursor: pointer;
-            position: absolute; /* ロゴ位置固定 */
-            left: 20px; /* ロゴは左に固定 */
         }
         nav {
             background: rgba(255,255,255,0.85);
@@ -78,24 +76,15 @@
             font-size: 0.9em;
             color: #4b3832;
         }
-        /* ここでPC版のみ調整 */
-        @media (min-width: 601px) {
-            header h1 {
-                text-align: center; /* タイトルを中央に */
-            }
-            header a img {
-                position: absolute;
-                left: 20px; /* ロゴは左に固定 */
-            }
-        }
-        /* スマホ版の調整 */
         @media (max-width: 600px) {
-            header {
-                justify-content: center; /* スマホ版では中央に寄せる */
-            }
             header a img {
-                position: relative;
-                max-width: 60px; /* ロゴのサイズ調整 */
+                max-width: 60px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            header {
+                flex-wrap: nowrap;
             }
         }
     </style>
