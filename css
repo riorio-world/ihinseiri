@@ -11,19 +11,21 @@ body {
 
 header {
     display: flex;
-    justify-content: center; /* タイトルを中央に */
     align-items: center;
+    justify-content: space-between;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* ロゴの位置を絶対指定するためにrelativeに設定 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;  /* ← これ必要！ */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
     color: #4b3832;
-    text-align: center; /* タイトルを中央揃え */
+    position: absolute;    /* ← 追加！ */
+    left: 50%;             /* ← 追加！ */
+    transform: translateX(-50%); /* ← 追加！ */
 }
 
 header a img {
