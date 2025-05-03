@@ -20,7 +20,7 @@
         header {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* スマホ版はここ */
+            justify-content: center; /* PC版で真ん中に寄せる */
             padding: 20px;
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -30,13 +30,14 @@
             margin: 0;
             font-size: 2.5em;
             color: #4b3832;
-            flex: 1;
-            text-align: center;
+            text-align: center; /* タイトルを中央に配置 */
         }
         header a img {
             max-width: 100px;
             height: auto;
             cursor: pointer;
+            position: absolute; /* ロゴ位置固定 */
+            left: 20px; /* ロゴは左に固定 */
         }
         nav {
             background: rgba(255,255,255,0.85);
@@ -77,14 +78,24 @@
             font-size: 0.9em;
             color: #4b3832;
         }
-        /* スマホ版には影響なし */
+        /* ここでPC版のみ調整 */
         @media (min-width: 601px) {
-            header {
-                justify-content: center; /* PC版の中央寄せ */
+            header h1 {
+                text-align: center; /* タイトルを中央に */
             }
             header a img {
-                position: absolute; /* ロゴ位置固定 */
-                left: 20px;
+                position: absolute;
+                left: 20px; /* ロゴは左に固定 */
+            }
+        }
+        /* スマホ版の調整 */
+        @media (max-width: 600px) {
+            header {
+                justify-content: center; /* スマホ版では中央に寄せる */
+            }
+            header a img {
+                position: relative;
+                max-width: 60px; /* ロゴのサイズ調整 */
             }
         }
     </style>
