@@ -29,7 +29,6 @@
             margin: 0;
             font-size: 2.5em;
             color: #4b3832;
-            flex: 1; /* タイトルがロゴと同じ幅を持つように調整 */
             text-align: center; /* タイトルを中央に配置 */
         }
         header a img {
@@ -75,6 +74,23 @@
             background: rgba(255,255,255,0.85);
             font-size: 0.9em;
             color: #4b3832;
+        }
+
+        /* スマートフォンサイズ用のレスポンシブデザイン */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header a img {
+                max-width: 80px; /* ロゴサイズを小さく調整 */
+            }
+
+            header h1 {
+                font-size: 2em; /* タイトルのサイズを調整 */
+            }
         }
     </style>
 </head>
