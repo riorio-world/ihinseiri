@@ -24,6 +24,7 @@
             padding: 20px;
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative; /* ← 念のため入れとく */
         }
         header h1 {
             margin: 0;
@@ -77,10 +78,12 @@
             color: #4b3832;
         }
         @media (min-width: 601px) {
-            header h1 {
+            header {
+                justify-content: center;
+            }
+            header a {
                 position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
+                left: 20px;
             }
         }
     </style>
