@@ -20,11 +20,11 @@
         header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between; /* スマホ版はここ */
             padding: 20px;
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative; /* ← 念のため入れとく */
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -77,12 +77,13 @@
             font-size: 0.9em;
             color: #4b3832;
         }
+        /* スマホ版には影響なし */
         @media (min-width: 601px) {
             header {
-                justify-content: center;
+                justify-content: center; /* PC版の中央寄せ */
             }
-            header a {
-                position: absolute;
+            header a img {
+                position: absolute; /* ロゴ位置固定 */
                 left: 20px;
             }
         }
