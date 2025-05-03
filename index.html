@@ -29,7 +29,7 @@
             margin: 0;
             font-size: 2.5em;
             color: #4b3832;
-            text-align: center; /* タイトルを中央に配置 */
+            text-align: center;
         }
         header a img {
             max-width: 100px; /* ロゴの最大幅を指定（サイズ調整） */
@@ -79,17 +79,24 @@
         /* スマートフォンサイズ用のレスポンシブデザイン */
         @media screen and (max-width: 768px) {
             header {
-                flex-direction: column;
+                flex-direction: column; /* ロゴとタイトルを縦並び */
                 align-items: center;
                 text-align: center;
             }
 
             header a img {
                 max-width: 80px; /* ロゴサイズを小さく調整 */
+                margin-left: 0; /* ロゴを左寄せにしない */
             }
 
             header h1 {
                 font-size: 2em; /* タイトルのサイズを調整 */
+            }
+
+            /* タイトルの位置がずれないように調整 */
+            nav {
+                flex-direction: column; /* スマートフォンでのナビゲーションを縦並び */
+                align-items: center;
             }
         }
     </style>
