@@ -77,14 +77,10 @@
             color: #4b3832;
         }
         @media (max-width: 600px) {
-            header a img {
-                max-width: 60px;
-            }
-            header h1 {
-                font-size: 1.5em;
-            }
-            header {
-                flex-wrap: nowrap;
+            nav a {
+                white-space: nowrap;   /* 改行させない */
+                font-size: 0.85em;      /* 小さめのフォントに調整 */
+                padding: 4px 8px;       /* タブ内の余白を詰めてバランス調整 */
             }
         }
     </style>
