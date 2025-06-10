@@ -12,6 +12,7 @@
             background-color: #fff;
             background: url('https://images.unsplash.com/photo-1611072337226-1140ab367200?q=80&w=2888&auto=format&fit=crop') center/cover no-repeat fixed;
         }
+    
         header {
             display: flex;
             align-items: center;
@@ -20,6 +21,7 @@
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+    
         header h1 {
             margin: 0;
             font-size: 2.2em;
@@ -27,27 +29,33 @@
             flex: 1;
             text-align: center;
         }
+    
         header a img {
             max-width: 100px;
             height: auto;
             cursor: pointer;
         }
+    
         nav {
             background: rgba(255,255,255,0.85);
             display: flex;
             justify-content: center;
             padding: 10px;
-            gap: 15px;
+            gap: 30px; /* PC用は広め */
         }
+    
         nav a {
             text-decoration: none;
             color: #4b3832;
             font-weight: bold;
             transition: color 0.3s;
+            font-size: 1.1em; /* PC向け大きめフォント */
         }
+    
         nav a:hover {
             color: #b08b5a;
         }
+    
         main {
             max-width: 1000px;
             margin: 40px auto;
@@ -56,18 +64,22 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+    
         section {
             margin-bottom: 30px;
         }
+    
         h2 {
             border-bottom: 2px solid #b08b5a;
             padding-bottom: 10px;
             color: #4b3832;
         }
+    
         h3 {
             color: #4b3832;
             margin-top: 20px;
         }
+    
         footer {
             text-align: center;
             padding: 20px;
@@ -75,11 +87,21 @@
             font-size: 0.9em;
             color: #4b3832;
         }
+    
         @media (max-width: 600px) {
+            nav {
+                justify-content: flex-start;
+                gap: 12px; /* タブ間隔を狭める */
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+    
             nav a {
-                white-space: nowrap;   /* 改行させない */
-                font-size: 0.85em;      /* 小さめのフォントに調整 */
-                padding: 4px 8px;       /* タブ内の余白を詰めてバランス調整 */
+                white-space: nowrap;
+                font-size: 0.85em;
+                padding: 4px 8px;
+                flex-shrink: 0;
             }
         }
     </style>
